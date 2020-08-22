@@ -1,0 +1,51 @@
+/* form */
+.form__item {
+    position: relative;
+}
+
+.form__control {
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $extra-color;
+    padding: 14px 25px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.form__control::placeholder {
+    color: $primary-color;
+}
+
+.form-search {
+    max-width: 750px;
+    width: 100%;
+}
+ 
+.form__control-search {
+    padding-left: 50px;
+    padding-right: 100px;
+    background-image: url('../img/search-hover.svg');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+}
+
+.submit-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $main-color;
+    padding: 14px 25px;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
