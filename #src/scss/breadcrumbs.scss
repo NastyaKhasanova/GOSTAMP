@@ -1,0 +1,32 @@
+/* breadcrumbs */
+.breadcrumbs {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 0.875rem;
+    list-style: none;
+}
+
+.breadcrumbs >li {
+	display: inline-block;
+}
+
+.breadcrumbs__link {
+	position: relative;
+}
+
+.breadcrumbs__link::after {
+    content: '/';
+    position: relative;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.breadcrumbs__link a {
+	color: $primary-color;
+	transition: color 0.3s ease;
+}
+
+.breadcrumbs__link a:hover,
+.breadcrumbs__link a:focus {
+	color: $extra-color;
+}

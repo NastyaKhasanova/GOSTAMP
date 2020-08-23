@@ -62,10 +62,24 @@ body {
     font-size: 2.375rem;
     line-height: 1.2;
     font-weight: 700;  
+    color: $extra-color;
 
     &:not(:last-child) {
         margin-bottom: 3.75rem;
     }
+}
+
+h3.block-title {
+    font-size: 1.75rem;
+}
+
+.page-header {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: 700;  
+    color: $extra-color;
+    margin-bottom: 3.75rem;
+    text-transform: uppercase;
 }
 
 .center {
@@ -94,24 +108,104 @@ input, a, button, textarea, select {
 	outline: none
 }
 
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+    font-size: 2.375rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5625rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
 p:not(:last-child) {
     margin-bottom: 15px;
 }
 
+.subtitle {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.color-text {
+    color: $main-color;
+}
+
+.block-title + .subtitle {
+    margin-top: -3.5rem;
+}
+
+.color-block {
+    background: $color-block;
+}
+
+/* btn */
+
 .btn {
   display: inline-block;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
-  padding: 16px 30px;
+  padding: 17px 30px;
   border-radius: 30px;
-  color: #fff;
-  background: $main-color;
-  transition: background 0.3s linear;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s linear, color 0.3s ease;
+}
+
+.btn-color {
+    color: #fff;
+    background: $main-color;
+
+    &:hover,
+    &:focus {
+        background: $color-hover;
+    }
+}
+
+.btn-border-dark {
+    color: $extra-color;
+    border-color: $extra-color;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: $main-color;
+        border-color: $main-color;
+    }
+}
+
+.btn-border-color {
+    color: $main-color;
+    border-color: $main-color;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        background-color: $main-color;
+        color: #fff;
+    }
+}
+
+.btn-next {
+  padding-right: 70px;
+  background-image: url('../img/next.svg');
+  background-repeat: no-repeat;
+  background-size: 14px auto;
+  background-position: bottom 50% right 30px;
 
   &:hover,
   &:focus {
-      background: $color-hover;
+      background-image: url('../img/next-hover.svg');
   }
 }
 
@@ -152,13 +246,123 @@ p:not(:last-child) {
     }
 }
 
+.socials li a[href*="vk.com"] {
+    background: url('../img/vk.svg') no-repeat center;
+    background-size: contain;
+
+    img {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        background: url('../img/vk-hover.svg') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.socials li a[href*="instagram"]  {
+    background: url('../img/inst.svg') no-repeat center;
+    background-size: contain;
+
+    img {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+       background: url('../img/inst-hover.svg') no-repeat center;
+        background-size: contain;
+    }
+}
+
+/* swiper-button */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover,
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+    background-color: #f8f8f8;
+}
+
+.swiper-button-next {
+    background-image: url('../img/right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+        background-image: url('../img/right-hover.svg');
+    }
+}
+
+.swiper-button-prev {
+    background-image: url('../img/left.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+        background-image: url('../img/left-hover.svg');
+    }
+}
+
+.swiper-pagination-bullets {
+    display: flex;
+    padding: 0 20px;
+
+    .swiper-pagination-bullet {
+        flex: 1 1 auto;
+        height: 2px;
+        border-radius: 0;
+        background: #EAEAEA;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #6FC5DD;
+    }
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar {
+    background: #EAEAEA;
+    height: 2px;
+
+    .swiper-pagination-progressbar-fill {
+        background: #6FC5DD;
+    }
+}
+
 @import "form";
+
+@import "breadcrumbs";
+
+@import "paginator";
 
 @import "header";
 
 @import "footer";
 
 @import "top-banner";
+
+@import "product-list";
+
+@import "start-box";
+
+@import "instruction-block";
+
+@import "instagram-block";
 
 
 /*media queries*/

@@ -1,7 +1,6 @@
 /*footer*/
 .footer {
     position: relative;
-    padding: 60px 0;
 
     .container {
         position: relative;
@@ -24,6 +23,26 @@
     .logo {
         width: 124px;
     }
+
+    .main-menu {
+        margin-top: -10px;
+
+        + .footer__contacts {
+            margin-top: 40px;
+        }
+    }
+
+    .main-menu li a {
+        color: $extra-color;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus,
+        &.active {
+            text-decoration: none;
+            color: $main-color;
+        }
+    }
 }
 
 .footer__top,
@@ -31,4 +50,57 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.telegram-text {
+    display: flex;
+    color: $extra-color;
+    line-height: 1.65;
+
+    img {
+        flex: none;
+        width: 45px;
+        margin-right: 20px;
+    }
+}
+
+.footer__telegram .telegram-text  {
+    margin-bottom: 30px;
+}
+
+.footer__contacts-item:not(:last-child) {
+    margin-bottom: 15px;   
+}
+
+.footer__contacts-item {
+    font-size: 0.875rem;
+}
+
+.footer__contacts-item a {
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    b {
+        font-size: 1.25rem;
+        color: $extra-color;
+    }
+}
+
+.footer__bottom {
+    align-items: flex-end;
+    margin-top: -44px;
+    font-size: 0.875rem;
+
+    a {
+        color: $primary-color;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
 }

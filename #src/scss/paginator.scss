@@ -1,0 +1,77 @@
+/* paginator */
+.paginator-wrap {
+	margin: 70px 0 30px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding-right: 200px;
+
+	.btn-more {
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		max-width: 160px;
+	}
+}
+
+.paginator__list>li {
+	display: inline-block;
+	padding: 0;
+}
+
+.paginator__link {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 33px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	transition: all 0.3s ease;
+	color: $extra-color;
+}
+
+.paginator__link:hover,
+.paginator__link:focus {
+  color: $main-color;
+}
+
+.paginator__link.active {
+	background: #fff;
+	border-color: $main-color;
+	color: $main-color;
+}
+
+.paginator__arrow {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	top: 10px;
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+}
+
+.paginator__arrow:hover,
+.paginator__arrow:focus {
+	opacity: 1;
+}
+
+.paginator__arrow--left {
+	background: url('../img/left.svg') no-repeat center;
+	margin-right: 10px;
+}
+
+.paginator__arrow--right {
+	background: url('../img/right.svg') no-repeat center;
+	margin-left: 10px;
+}
+
+.paginator-wrap .load-more {
+	text-align: center;
+	display: none;
+}
