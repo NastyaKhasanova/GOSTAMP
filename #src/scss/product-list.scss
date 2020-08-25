@@ -16,6 +16,8 @@
 .product__card {
     position: relative;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     background-color: #fff;
     border: 1px solid #F3F3F3;
@@ -51,6 +53,10 @@
 
 .product__card-desc {
     padding: 30px 20px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product__card-title {
@@ -116,7 +122,6 @@
 
     .new-price {
         color: $main-color;
-        margin-right: 20px;
     }
 
     .old-price {
@@ -159,6 +164,7 @@
 
 .product__card-slider {
     padding-bottom: 15px;
+    width: 100%;
 
     .swiper-slide {
         position: relative;
@@ -195,15 +201,9 @@
     }
 }
 
-.products-tabs__list,
+
 .products__slider-wrap {
     position: relative;
-}
-
-.products-tabs__pane:not(.active) {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
 }
 
 .products__slider {
@@ -214,32 +214,9 @@
         top: auto;
         bottom: 0;
     }
-}
 
-.product-tabs__nav {
-    list-style: none;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: 30px;
-
-    li {
-        display: inline-block;
-        padding: 0 20px; 
-        font-size: 1.125rem;
-        font-weight: 700;
-        color: $color-hover;
-        opacity: 0.5;
-        transition: all 0.3s ease;
-
-        &:hover,
-        &.active {
-            color: $main-color;
-            opacity: 1;
-        }
-
-        &:not(.active) {
-            cursor: pointer;
-        }
+    .swiper-slide {
+        height: auto;
     }
 }
 

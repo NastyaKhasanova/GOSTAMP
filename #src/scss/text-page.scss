@@ -1,0 +1,138 @@
+/* text-page */
+.text-page {
+    color: $text-color;
+}
+
+.text-page strong {
+		font-weight: 700
+}
+.text-page h2, .text-page h3, .text-page h4, .text-page h5, .text-page h6{
+        font-weight: 700;
+        color: $extra-color;
+}
+
+.text-page h5, .text-page h6{
+		font-size: 1rem;
+		line-height: 1.50;
+}
+.text-page blockquote{
+		background: #f8f8fa;
+		padding: 1.75rem 3.125rem 1.75rem 3.4375rem;
+}
+.text-page blockquote a{
+			font-size: 1rem;
+			border-bottom: none;
+			font-weight: 700;
+}
+.text-page [align="right"]{
+		float: right;
+		margin-left: 80px;
+}
+.text-page [align="left"]{
+		float: left;
+		margin-right: 80px;
+}
+
+.text-page img {
+	margin-bottom: 1.8rem;
+}
+
+.text-page img[height]{
+		height: auto
+}
+
+.text-page table{
+		width: 100%
+}
+.text-page table td, .text-page table th{
+			padding: 15px 20px;
+			font-weight: 400;
+}
+.text-page table td:not([valign]), .text-page table td[valign="middle"], .text-page table th:not([valign]), .text-page table th[valign="middle"]{
+				vertical-align: middle
+}
+.text-page table td[valign="top"],.text-page table th[valign="top"]{
+				vertical-align: top
+}
+.text-page table td[valign="bottom"],.text-page table th[valign="bottom"]{
+				vertical-align: bottom
+}
+.text-page table[cellspacing]:not([cellspacing="1"]):not([cellspacing="0"]){}
+.text-page table[border="1"] td, .text-page table[border="1"] th{
+			border: 1px solid $primary-color;
+}
+.text-page ul, .text-page ol{
+		list-style: none !important;
+		max-width: 720px !important;
+}
+.text-page li{
+		position: relative;
+}
+.text-page li:not(:first-child){
+			margin: 6px 0 0
+}
+.text-page li:before{
+			display: inline-block
+}
+.text-page li ul, .text-page li ol{
+			margin-bottom: 20px;
+			margin-top: 0
+}
+.text-page li li{
+			padding-left: 10px
+}
+.text-page li li:before{
+				margin-right: 10px !important
+}
+.text-page li li:not(:first-child){
+				margin-top: 5px
+}
+.text-page ul li{
+			padding-left: 10px
+}
+.text-page ul li:before{
+				content: "";
+				position: absolute;
+				top: 12px;
+				left: 0;
+				width: 5px;
+				height: 1px;
+				background: $main-color;
+				margin: 0 4px 0 0;
+				display: inline-block
+}
+.text-page ul li li{
+				padding-left: 20px
+}
+.text-page ol{
+		counter-reset: i
+}
+.text-page ol li{
+			counter-increment: i
+}
+.text-page ol li:before{
+				content: counter(i) ".";
+				margin-right: 4px
+}
+
+.text-page {
+	max-width: 845px;
+	width: 100%;
+}
+
+.text-page > :not(:first-child),
+.text-page > div > :not(:first-child) {
+  margin-top: 1.5625rem;
+}
+
+.text-page p a {
+	color: $extra-color;
+	padding-bottom: 1px;
+	border-bottom: 1px solid;
+	transition: color 0.3s ease;
+}
+
+.text-page p a:hover,
+.text-page p a:focus {
+	color: $primary-color;
+}
