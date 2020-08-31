@@ -150,7 +150,6 @@ p:not(:last-child) {
 }
 
 /* btn */
-
 .btn {
   display: inline-block;
   font-size: 0.875rem;
@@ -286,6 +285,12 @@ p:not(:last-child) {
     background-size: 38% auto;
 }
 
+@media screen and (max-width: 960px) {
+    .fancybox-content {
+        padding: 40px 0;
+    }
+}
+
 /* swiper-button */
 .swiper-button-next,
 .swiper-button-prev {
@@ -293,7 +298,7 @@ p:not(:last-child) {
     height: 64px;
     border-radius: 50%;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
 }
 
@@ -356,6 +361,20 @@ p:not(:last-child) {
     }
 }
 
+.color-block .swiper-button-next:hover,
+.color-block .swiper-button-prev:hover,
+.color-block .swiper-button-next:focus,
+.color-block .swiper-button-prev:focus {
+    background-color: #fff;
+    /* box-shadow: 0px 18px 31px rgba(230, 83, 197, 0.07); */
+}
+
+@media screen and (max-width: 640px ) {
+    .swiper-pagination-bullets {
+        padding: 0 10px ;
+    }
+}
+
 @import "form";
 
 @import "breadcrumbs";
@@ -371,6 +390,8 @@ p:not(:last-child) {
 @import "top-banner";
 
 @import "product-list";
+
+@import "block-404";
 
 /* tabs */
 .tabs {
@@ -408,7 +429,27 @@ p:not(:last-child) {
     position: absolute;
     opacity: 0;
     width: 100%;
+    pointer-events: none;
 }
+
+@media screen and (max-width: 640px ) {
+    .tabs__nav {
+        margin-bottom: 20px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .tabs__nav li {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 380px ) {
+    .tabs__nav li {
+        font-size: 1rem;
+    }
+}
+
 
 @import "start-box";
 
@@ -423,5 +464,47 @@ p:not(:last-child) {
 @media screen and (max-width: 1280px ) {
     body, html {
         font-size: 14px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 960px ) {
+    .page-section {
+        padding: 50px 0;
+    }
+
+    .block-title:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .block-title+.subtitle {
+        margin-top: -20px;
+    }
+
+    .block-title {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width: 520px ) {
+    .page-section {
+        padding: 40px 0;
+    }
+
+    .block-title,
+    h3.block-title,
+    .page-header {
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        width: 85px;
     }
 }

@@ -120,6 +120,7 @@
         overflow: hidden;
         opacity: 0.5;
         transition: opacity 0.3s ease;
+        cursor: pointer;
 
         img {
             position: absolute;
@@ -170,4 +171,116 @@
 
 .slider-popup .product-inner__gallery .swiper-slide a {
     pointer-events: none;
+}
+
+@media screen and (max-width: 960px) {
+    .product-inner__cart-line {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .product-inner__cart-line .product__card-price {
+        width: calc(100% - 150px);
+        margin-right: 0;
+        text-align: right;
+
+        + .btn {
+            margin-top: 20px;
+        }
+    }
+
+    .product-inner__top--text .add-fav {
+        top: auto;
+        bottom: 12px;
+        width: 24px;
+        height: 22px;
+    }
+
+    .product-inner__top--text .page-header {
+        padding-right: 0;
+    }
+
+    .product-inner__tabs .tabs {
+        max-width: 100%;
+    }
+
+    .product-inner {
+        background: transparent;
+    }
+
+    .slider-popup .product-inner__top--slider {
+        width: 90vw;
+    }
+
+    .product-inner__tabs .text-page {
+        font-size: 1rem;
+        transition: all .3s ease;
+        overflow: hidden;
+    }
+
+    .product-inner__tabs .text-page.hide {
+        height: 80px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35px;
+            pointer-events: none;
+            display: block;
+            background: linear-gradient(0deg, #FFFFFF 24.49%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+
+    .content_toggle {
+        margin-top: 10px;
+        color: $extra-color;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: relative;
+            display: inline-block;
+            top: 2px;
+            width: 10px;
+            height: 10px;
+            margin-left: 5px;
+            background: url('../img/select2.svg') no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .product-inner__top--slider {
+        width: 100%;
+    }
+
+    .product-inner__top--text {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .product-inner__top--text .page-header {
+        margin-bottom: 30px;
+    }
+
+    .page-section.product-inner {
+        padding-top: 20px;
+    }
+
+    .product-inner__cart-line .product__card-price {
+        font-size: 1.75rem;
+    }
+
+    .product-inner__top:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    .product-inner__thumbs {
+        max-width: 215px;
+    }
 }

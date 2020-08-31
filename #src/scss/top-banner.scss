@@ -92,3 +92,47 @@
         object-fit: cover;
     }
 }
+
+@media screen and (max-width: 520px ) {
+    .top-banner__slider-wrap {
+        margin-right: -20px;
+    }
+
+    .top-banner__nav {
+        display: none;
+    }
+
+    .top-banner__slider {
+        width: 100%;
+        padding-bottom: 32px;
+        border-radius: 0;
+    }
+
+    .top-banner__slider .swiper-pagination {
+        display: block;
+        top: auto;
+        bottom: 8px;
+        margin-left: 25px;
+        margin-right: 45px;
+        width: calc(100% - 70px);
+    }
+
+    .top-banner__slider .swiper-button-next, .top-banner__slider .swiper-button-prev {
+        bottom: 0;
+        width: 16px;
+        height: 16px;
+        opacity: .5;
+    }
+
+    .top-banner__slider .swiper-button-next {
+        right: 20px;
+    }
+
+    .top-banner__slider .swiper-button-prev {
+        left: 0;
+    }
+
+    .top-banner__slider .swiper-slide {
+        width: calc(100% - 70px);
+    }
+}

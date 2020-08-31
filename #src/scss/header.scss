@@ -145,28 +145,40 @@
     justify-content: space-around;
 
     li {
-      display: inline-block;
-      padding: 0 15px;
+        display: inline-block;
+        padding: 0 15px;
 
-      a { 
-          display: inline-block;
-          font-weight: 500;
-          padding: 10px 0;
-          color: $extra-color;
-          transition: color 0.3s ease;
+        a { 
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            padding: 10px 0;
+            color: $extra-color;
+            transition: color 0.3s ease;
 
-          &:hover,
-          &:focus,
-          &.active {
-              color: $main-color;
-          }
-      }
+            &:hover,
+            &:focus,
+            &.active {
+                color: $main-color;
+            }
+
+            .menu-icon {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                flex: none;
+                margin-right: 10px;
+            }
+        }
     }
 }
 
 .header__search {
     padding: 15px 0;
     display: none;
+    z-index: 40;
 }
 
 .header__search .form-search {
@@ -175,6 +187,236 @@
 }
 
 .mobile-menu {
+    max-width: 520px;
+    width: 100%;
     position: fixed;
+    top: 72px;
+    background: #fff;
+    z-index: 30;
+    padding: 20px;
     transform: translate(-100%, 0);
+    transition: transform .3s ease;
+    height: calc(100vh - 52px);
+    overflow: auto;
+    z-index: 40;
+
+    .catalog-menu {
+        flex-direction: column;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        margin-left: -15px;
+        margin-right: -15px;
+        width: calc(100% + 30px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -5px;
+            right: -5px;
+            bottom: 0;
+            height: 1px;
+            background: rgba(0,0,0,.1);
+        }
+
+        .menu-icon {
+            display: flex;
+        }
+
+        li a {
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
+
+    .main-menu li {
+        display: block;
+
+        a {
+            font-size: 14px;
+        }
+    }
+
+    .header__contacts {
+        margin-top: 10px;
+        margin-right: 0;
+
+        a {
+            font-size: 14px;
+            color: $main-color;
+        }
+    }
+
+    .user-btn {
+        position: relative;
+        padding: 12px 30px;
+        max-width: 280px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid $main-color;
+        color: $main-color;
+        border-radius: 50px;
+        line-height: 1;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg path {
+            fill: $main-color;
+        }
+
+        &::after {
+            content: 'Вход / Регистрация';
+            position: relative;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+}
+
+.burger {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+    span {
+        width: 20px;
+        position: relative;
+        display: block;
+        height: 1px;
+        background: $extra-color;
+        transition: background .2s .4s;
+
+        &::before,
+        &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $extra-color;
+                transform-origin: 50% 50%;
+                transition: top .3s .3s, transform .3s, background .3s ease;
+        }
+
+        &::before {
+                top: 6px;
+        }
+
+        &::after {
+            top: -6px;
+        }
+    }
+
+    &.open {
+        span {
+            background: transparent;
+
+            &::before,
+            &::after {
+                background: $main-color;
+            }
+
+            &::before {
+                transform: rotate3d(0, 0, 1, 45deg);
+                top: 0;
+                transition: top .3s,transform .3s .5s;
+            }
+
+            &::after {
+                transform: rotate3d(0, 0, 1, -45deg);
+                top: 0;
+                transition: top .3s,transform .3s .5s;
+            }
+        }  
+    }
+}
+
+@media screen and (max-width: 960px ) {
+    .header {
+        z-index: 40;
+    }
+
+    .header__mobille-btn {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+    }
+
+    .header__top-left .nav,
+    .header__top-right .header__contacts,
+    .header__top-right .user-btn,
+    .header__top-right .search-btn,
+    .header__bottom {
+        display: none;
+    }
+
+    .header__top {
+        position: relative;
+        padding-bottom: 17px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -5px;
+            right: -5px;
+            bottom: 0;
+            height: 1px;
+            background: rgba(0,0,0,.1);
+        }
+    }
+
+    .header::after, .header::before {
+        display: none;
+    }
+
+    .header__search {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: #fff;
+        height: calc(100vh - 52px);
+    }
+
+    body.search-open,
+    body.burger-open {
+        overflow-y: hidden;
+    }
+
+    #main {
+        transition: filter .3s ease;
+    }
+
+    body.burger-open #main {
+        filter: blur(10px);
+    }
+
+    body.burger-open .mobile-menu {
+        transform: translate(0,0);
+    }
+}
+
+@media screen and (max-width: 520px ) {
+   .mobile-menu {
+       top: 64px;
+       height: calc(100vh - 64px);
+   }
+
+   .header__search {
+       height: calc(100vh - 64px);
+   }
+
+   .mobile-menu .user-btn {
+       margin-bottom: 10px;
+   }
+
+   .mobile-menu .catalog-menu {
+       padding-bottom: 15px;
+       margin-bottom: 15px;
+   }
 }
