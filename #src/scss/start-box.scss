@@ -109,11 +109,28 @@
     .btn-border-dark {
         background-color: #fff;
         border-color: #fff;
+        padding-right: 40px;
+        background-image: url('../img/next2.svg');
+        background-size: 13px 9px;
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+
+        &:hover,
+        &:focus {
+            background-image: url('../img/next.svg');
+            background-size: 13px 9px;
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
     }
 }
 
 .products-tabs + .page-section.start-box {
     padding-top: 0;
+}
+
+.start-box__btn {
+    display: none;
 }
 
 @media screen and (max-width: 820px ) {
@@ -181,6 +198,16 @@
     .start-box .product__card-desc {
         padding: 15px 10px;
     }
+
+    .start-box__btn {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .start-box .product__card {
+        border-color: #F3F3F3;
+    }
 }
 
 @media screen and (max-width: 520px ) {
@@ -196,6 +223,6 @@
     }
 
     .sets__card-btn {
-        padding: 20px;
+        padding: 20px 15px;
     }
 }

@@ -137,6 +137,7 @@
 
     .add-fav {
         margin-right: 15px;
+        flex: none;
     }
 }
 
@@ -190,6 +191,21 @@
 
     &.swiper-container-horizontal > .swiper-pagination-bullets {
         bottom: 0;
+        top: 0;
+        pointer-events: none;
+
+        .swiper-pagination-bullet {
+            height: 100%;
+            background: transparent;
+            border-bottom: 2px solid #eaeaea;
+            transition: border-color .3s ease;
+            outline: none;
+            pointer-events: all;
+        }
+
+        .swiper-pagination-bullet-active {
+            border-color: #6fc5dd;
+        }
     }
 }
 
@@ -262,6 +278,12 @@
     .page-header {
         margin-bottom: 0;
     }
+
+    .catalog-filter {
+        min-width: 200px;
+        position: relative;
+        top: 10px;
+    }
 }
 
 .catalog-block__top .page-header + .catalog-block__form {
@@ -310,24 +332,7 @@
     }
 }
 
-@media screen and (max-width: 640px ) {
-    .products__slider {
-        padding-bottom: 25px;
-    }
-
-    .product__card-title {
-        font-size: 1rem;
-        line-height: 1.2;
-    }
-
-    .product__card-desc {
-        padding: 15px 10px;
-    }
-
-    .product__card-price {
-        font-size: 1rem;
-    }
-
+@media screen and (max-width: 720px ) {
     .product__card-btn {
         width: 100%;
         justify-content: space-between;
@@ -357,6 +362,25 @@
     .product__card-line .btn-cart:hover span {
         width: auto;
     }
+}
+
+@media screen and (max-width: 640px ) {
+    .products__slider {
+        padding-bottom: 25px;
+    }
+
+    .product__card-title {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .product__card-desc {
+        padding: 15px 10px;
+    }
+
+    .product__card-price {
+        font-size: 1rem;
+    }
 
     .product__card-sticker {
         top: -15px;
@@ -380,13 +404,38 @@
 }
 
 @media screen and (max-width: 520px ) {
+    .catalog-block__top {
+        margin-bottom: 20px;
+    }
+
     .catalog-block__top .page-header {
-        width: 100%;
+        margin-right: 20px;
         margin-bottom: 20px;
     }
 
     .catalog-filter {
-        margin-left: -10px;
+        margin-bottom: 20px;
+
+        select {
+            padding-left: 0;
+            padding-right: 20px;
+            background-size: 10px auto;
+            background-position: right 0 center;
+
+            option {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .catalog-block__top .catalog-filter {
+        min-width: inherit;
+        top: 0;
+    }
+
+    .catalog-block__top .page-header + .catalog-block__form {
+        margin-top: 0;
+        margin-bottom: 20px;
     }
     
 }

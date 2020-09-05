@@ -173,6 +173,10 @@
     pointer-events: none;
 }
 
+.content_toggle {
+    display: none;
+}
+
 @media screen and (max-width: 960px) {
     .product-inner__cart-line {
         flex-wrap: wrap;
@@ -236,6 +240,8 @@
     }
 
     .content_toggle {
+        display: block;
+        cursor: pointer;
         margin-top: 10px;
         color: $extra-color;
         position: relative;

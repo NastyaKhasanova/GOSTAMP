@@ -3,9 +3,14 @@
     background: $extra-color;
     color: #fff;
     padding: 120px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-404 {
+    width: calc(100% + 40px);
     margin-left: -20px;
     margin-right: -20px;
     height: 14vw;
@@ -52,5 +57,9 @@
 @media screen and (max-width: 640px) {
     .img-404 {
         height: 35vw;
+    }
+
+    .page-section.block-404 {
+        padding: 60px 20px;
     }
 }

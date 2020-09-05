@@ -140,6 +140,7 @@ $(document).ready(function () {
                     spaceBetween: 20,
                 },
                 280: {
+                    spaceBetween: 10,
                     slidesPerView: 2,
                     slidesPerGroup: 2,
                 },
@@ -167,6 +168,14 @@ $(document).ready(function () {
         })
 
     });
+
+    $('.product__card-slider').each(function(){
+        var linkProduct = $(this).find('.swiper-slide a').attr('href');
+        $(this).find('.swiper-pagination-bullet').on('click', function (event) {
+            window.location.href = linkProduct;
+        });
+    });
+
 
 
     var sliderClone = $('.product-inner__top--slider').clone();
@@ -274,31 +283,39 @@ $(document).ready(function () {
             }
             
         }
-    });
 
-    if ($(window).width() <= 960) {
-        $('.product-inner__cart-line').append($('.product-inner__top--text .add-fav'));
+        if ($(window).width() <= 960) {
+            $('.product-inner__cart-line').append($('.product-inner__top--text .add-fav'));
 
-        // read-more
-        $('.product-inner__tabs .tabs__content .text-page').each( function(){
-            var toggleContent = $(this);
-            if (toggleContent.height() > 80) {
-                toggleContent.addClass('hide');
-                toggleContent.after('<div class="content_toggle">Читать</div>');
-            }
-            $('.content_toggle').click(function () {
-                if (toggleContent.hasClass('hide')) {
-                    $('.content_toggle').html('Читать');
-                    toggleContent.removeClass('hide');
-                } else {
-                    $('.content_toggle').html('Скрыть');
+            // read-more
+            $('.product-inner__tabs .tabs__content .text-page').each(function () {
+                var toggleContent = $(this);
+                if (toggleContent.height() > 80) {
                     toggleContent.addClass('hide');
+                    toggleContent.after('<div class="content_toggle">Читать</div>');
                 }
-                return false;
+                $('.content_toggle').click(function () {
+                    if (toggleContent.hasClass('hide')) {
+                        $('.content_toggle').html('Читать');
+                        toggleContent.removeClass('hide');
+                    } else {
+                        $('.content_toggle').html('Скрыть');
+                        toggleContent.addClass('hide');
+                    }
+                    return false;
+                });
             });
-        });
-        
-    }
 
+        }
+
+        let headerHeight = $('.header').innerHeight();
+        console.log(headerHeight);
+
+        $('.block-404').css('min-height', function () {
+            return $(window).height() - headerHeight + 20 + 'px';
+        });
+    });
+    
+    
 
 });

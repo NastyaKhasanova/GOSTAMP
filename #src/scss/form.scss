@@ -6,7 +6,7 @@
 .form__control {
     width: 100%;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 600;
     color: $extra-color;
     padding: 14px 25px;
     border: 1px solid #C4C4C4;
@@ -70,7 +70,7 @@ select {
 }
 
 .selectize-input {
-    min-width: 200px;
+    width: auto;
     border: 0;
     border-radius: 0;
     padding: 0;
@@ -119,6 +119,8 @@ select {
     box-shadow: 0px 18px 31px rgba(230, 83, 197, 0.07);
     border-radius: 5px;    
     color: $extra-color;
+    left: auto;
+    right: 0;
 }
 
 .selectize-dropdown .option, .selectize-dropdown .optgroup-header {

@@ -444,6 +444,18 @@ p:not(:last-child) {
     }
 }
 
+@media screen and (max-width: 520px) {
+    .tabs__nav {
+        display: flex;
+        overflow: auto;
+        padding-bottom: 10px;
+
+        li {
+            flex-shrink: 0;
+        }
+    }
+}
+
 @media screen and (max-width: 380px ) {
     .tabs__nav li {
         font-size: 1rem;
@@ -506,5 +518,13 @@ p:not(:last-child) {
 
     .logo img {
         width: 85px;
+    }
+
+    .btn {
+        padding: 15px 20px;
+    }
+
+    .btn-next {
+        padding-right: 60px;
     }
 }
