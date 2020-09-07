@@ -309,13 +309,24 @@ $(document).ready(function () {
         }
 
         let headerHeight = $('.header').innerHeight();
-        console.log(headerHeight);
 
         $('.block-404').css('min-height', function () {
             return $(window).height() - headerHeight + 20 + 'px';
         });
     });
-    
+
+    /* form-control */
+    $(".form__control").focus(function () {
+        $(this).parent(".form__item").each(function () {
+            $(this).addClass('form-value');
+        });
+    }).blur(function () {
+        if ($(this).val() == "") {
+            $(this).parent(".form__item").each(function () {
+                $(this).removeClass('form-value');
+            });
+        }
+    });
     
 
 });

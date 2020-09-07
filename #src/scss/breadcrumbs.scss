@@ -30,3 +30,9 @@
 .breadcrumbs__link a:focus {
 	color: $extra-color;
 }
+
+@media screen and (max-width: 960px) {
+    .breadcrumbs {
+	    margin-top: -10px;
+    }
+}

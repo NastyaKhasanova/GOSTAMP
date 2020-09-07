@@ -1,12 +1,16 @@
 /* text-page */
 .text-page {
-    color: $text-color;
+	color: $text-color;
+	font-size: 14px;
+	font-weight: 500;
 }
 
-.text-page strong {
-		font-weight: 700
+.text-page strong,
+.text-page b {
+		font-weight: 700;
+		color: $extra-color;
 }
-.text-page h2, .text-page h3, .text-page h4, .text-page h5, .text-page h6{
+.text-page h1, .text-page h2, .text-page h3, .text-page h4, .text-page h5, .text-page h6{
         font-weight: 700;
         color: $extra-color;
 }
@@ -122,7 +126,7 @@
 
 .text-page > :not(:first-child),
 .text-page > div > :not(:first-child) {
-  margin-top: 1.5625rem;
+  margin-top: 16px;
 }
 
 .text-page p a {
@@ -135,4 +139,50 @@
 .text-page p a:hover,
 .text-page p a:focus {
 	color: $primary-color;
+}
+
+.text-page__card {
+	background: #fff;
+	border-radius: 5px;
+	padding: 35px;
+}
+
+.text-page h2:not(:last-child),
+.text-page h3:not(:last-child),
+.text-page h4:not(:last-child),
+.text-page h5:not(:last-child) {
+	margin-bottom: 16px;
+}
+
+.text-page h2:not(:first-child),
+.text-page h3:not(:first-child),
+.text-page h4:not(:first-child),
+.text-page h5:not(:first-child) {
+	margin-top: 40px;
+}
+
+.text-page h1.page-header {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 520px) {
+   .text-page h1 {
+	   font-size: 24px;
+   }
+
+   .text-page-block.color-block {
+	   background: #fff;
+   }
+
+   .text-page__card {
+	   padding: 0;
+   }
+
+   .text-page h2:not(:first-child), .text-page h3:not(:first-child), .text-page h4:not(:first-child), .text-page h5:not(:first-child) {
+	   margin-top: 30px;
+   }
+
+   .text-page h2:not(:last-child), .text-page h3:not(:last-child), .text-page h4:not(:last-child), .text-page h5:not(:last-child) {
+	   margin-bottom: 15px;
+   }
 }

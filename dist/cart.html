@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoStamp</title>
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--styles-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="inner">
+    <header class="header">
+    <div class="container">
+        <div class="header__top">
+            <div class="header__top-left">
+                <div class="header__mobille-btn">
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                    <a href="#" class="search-btn">
+                        <svg id="search-icon" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.1575 16.9465L13.2545 13.0435C14.357 11.7071 14.9561 10.0445 14.9561 8.29329C14.9561 6.29395 14.1797 4.41868 12.7653 3.00425C11.3544 1.58982 9.47561 0.813477 7.47982 0.813477C5.48402 0.813477 3.6052 1.58982 2.19077 3.00425C0.776341 4.41513 0 6.29395 0 8.29329C0 10.2891 0.776341 12.1679 2.19077 13.5823C3.60166 14.9932 5.48047 15.7731 7.47982 15.7731C9.23456 15.7731 10.8971 15.174 12.23 14.0715L16.133 17.971C16.4166 18.2546 16.8739 18.2546 17.1575 17.971C17.4411 17.6874 17.4411 17.2301 17.1575 16.9465ZM3.21526 12.5543C2.07379 11.4164 1.44633 9.90269 1.44633 8.29329C1.44633 6.68389 2.07379 5.16666 3.21171 4.02873C4.34964 2.89081 5.86332 2.26336 7.47627 2.26336C9.08567 2.26336 10.6029 2.89081 11.7408 4.02873C12.8788 5.16666 13.5062 6.68035 13.5062 8.29329C13.5062 9.90269 12.8788 11.4199 11.7408 12.5578C10.6029 13.6958 9.08567 14.3232 7.47627 14.3232C5.86687 14.3232 4.35318 13.6958 3.21526 12.5543Z"
+                                fill="#343131" />
+                        </svg>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="main-menu">
+                        <li><a href="#">О бренде</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="logo">
+                <a href="/">
+                    <img src="img/logo.svg" alt="GoStamp">
+                </a>
+            </div>
+            <div class="header__top-right">
+                <div class="header__contacts">
+                    <div class="header__contacts-item">
+                        <a href="tel:88007770618">8 800 777 06 18</a>
+                    </div>
+                </div>
+                <div class="header__btn">
+                    <a href="#" class="search-btn">
+                        <svg id="search-icon" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.1575 16.9465L13.2545 13.0435C14.357 11.7071 14.9561 10.0445 14.9561 8.29329C14.9561 6.29395 14.1797 4.41868 12.7653 3.00425C11.3544 1.58982 9.47561 0.813477 7.47982 0.813477C5.48402 0.813477 3.6052 1.58982 2.19077 3.00425C0.776341 4.41513 0 6.29395 0 8.29329C0 10.2891 0.776341 12.1679 2.19077 13.5823C3.60166 14.9932 5.48047 15.7731 7.47982 15.7731C9.23456 15.7731 10.8971 15.174 12.23 14.0715L16.133 17.971C16.4166 18.2546 16.8739 18.2546 17.1575 17.971C17.4411 17.6874 17.4411 17.2301 17.1575 16.9465ZM3.21526 12.5543C2.07379 11.4164 1.44633 9.90269 1.44633 8.29329C1.44633 6.68389 2.07379 5.16666 3.21171 4.02873C4.34964 2.89081 5.86332 2.26336 7.47627 2.26336C9.08567 2.26336 10.6029 2.89081 11.7408 4.02873C12.8788 5.16666 13.5062 6.68035 13.5062 8.29329C13.5062 9.90269 12.8788 11.4199 11.7408 12.5578C10.6029 13.6958 9.08567 14.3232 7.47627 14.3232C5.86687 14.3232 4.35318 13.6958 3.21526 12.5543Z"
+                                fill="#343131" />
+                        </svg>
+                    </a>
+                    <a href="#" class="fav-btn">
+                        <svg id="fav-icon" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.73351 18.6891L1.74702 10.6622C-0.181949 8.42223 -0.181949 4.83457 1.74702 2.5946C2.71335 1.47646 4.02402 0.858154 5.41243 0.858154C6.80084 0.858154 8.1152 1.47646 9.07784 2.5946L9.34812 2.94262L9.65542 2.5946C10.6218 1.47646 11.9324 0.858154 13.3208 0.858154C14.7092 0.858154 16.0236 1.47646 16.9862 2.5946C18.9152 4.83457 18.9152 8.42223 16.9862 10.6622L9.9294 18.7298C9.79611 18.9519 9.08895 19.2444 8.73351 18.6891ZM5.41243 2.36134C4.48682 2.36134 3.56121 2.78712 2.90218 3.55723C1.43601 5.21592 1.43601 7.95942 2.90218 9.65514L9.34812 17.0674L15.7941 9.65514C17.2602 7.99645 17.2602 5.25294 15.7941 3.55723C15.098 2.78342 14.2131 2.36134 13.2838 2.36134C12.3545 2.36134 11.4326 2.78712 10.7736 3.55723L9.88497 4.56059C9.75538 4.71609 9.19632 5.06782 8.68908 4.48284L7.87825 3.55723C7.22662 2.78712 6.34174 2.36134 5.41243 2.36134Z"
+                                fill="#343131" />
+                        </svg>
+                    </a>
+                    <a href="#" class="user-btn">
+                        <svg id="user-icon" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.255 9.1533C11.5415 9.1533 13.4026 7.29221 13.4026 5.00573C13.4026 2.71925 11.5415 0.858154 9.255 0.858154C6.96851 0.858154 5.10742 2.71925 5.10742 5.00573C5.10742 7.29221 6.96497 9.1533 9.255 9.1533ZM9.255 2.30094C10.7439 2.30094 11.9562 3.51331 11.9562 5.00218C11.9562 6.49106 10.7439 7.70343 9.255 7.70343C7.76612 7.70343 6.55376 6.49106 6.55376 5.00218C6.55376 3.51331 7.76612 2.30094 9.255 2.30094Z"
+                                fill="#343131" />
+                            <path
+                                d="M13.2146 9.35178C12.9275 9.1958 12.5765 9.25252 12.3497 9.48649L9.24076 12.7053L6.13185 9.48649C5.90498 9.25252 5.55048 9.19935 5.26689 9.35533C2.40258 10.9151 0.552124 14.1126 0.555669 17.5016C0.555669 17.9022 0.878258 18.2248 1.27884 18.2248H17.2027C17.8195 18.1893 17.9259 17.693 17.9259 17.5016C17.9259 14.102 16.0754 10.9045 13.2146 9.35178ZM2.03391 16.7784C2.25015 14.375 3.54405 12.17 5.48668 10.9045L8.71611 14.2473C8.98907 14.5309 9.48536 14.5309 9.75832 14.2473L12.9913 10.9045C14.9304 12.1629 16.2243 14.3714 16.4441 16.7784H2.03391Z"
+                                fill="#343131" />
+                        </svg>
+                    </a>
+                    <a href="#" class="cart-btn">
+                        <svg id="cart-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.3717 6.83492H16.3567C16.3156 3.53104 13.4759 0.858154 9.99071 0.858154C6.50548 0.858154 3.6658 3.53104 3.62849 6.83492H1.61347C0.900751 6.88809 0.826121 7.46946 0.863436 7.67861L2.63964 17.6257C2.70307 17.9731 3.02025 18.2283 3.38967 18.2283H16.5918C16.9649 18.2283 17.2821 17.9731 17.3418 17.6257L19.1217 7.67861C19.159 7.46946 19.0695 6.88455 18.3717 6.83492ZM9.99071 2.30449C12.6364 2.30449 14.7894 4.32865 14.8305 6.83137H5.15094C5.19199 4.32865 7.34507 2.30449 9.99071 2.30449ZM15.9499 16.782H4.03522L2.51276 8.28125H17.4687L15.9499 16.782Z"
+                                fill="#343131" />
+                            <path
+                                d="M6.81518 11.4468H13.1625C13.5841 11.4468 13.9237 11.1242 13.9237 10.7237C13.9237 10.3231 13.5841 10.0005 13.1625 10.0005H6.81518C6.39352 10.0005 6.05396 10.3231 6.05396 10.7237C6.05396 11.1242 6.39725 11.4468 6.81518 11.4468Z"
+                                fill="#343131" />
+                            <path
+                                d="M6.81518 15.0628H13.1625C13.5841 15.0628 13.9237 14.7402 13.9237 14.3396C13.9237 13.939 13.5841 13.6165 13.1625 13.6165H6.81518C6.39352 13.6165 6.05396 13.939 6.05396 14.3396C6.05396 14.7402 6.39725 15.0628 6.81518 15.0628Z"
+                                fill="#343131" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <form class="form-search" action="/search/">
+                <div class="form__item form__item-search">
+                    <input type="text" required="required" placeholder="Поиск" class="form__control form__control-search">
+                    <input class="submit-search" type="submit" value="Найти">
+                </div>
+            </form>
+        </div>
+        <div class="header__bottom">
+            <ul class="catalog-menu">
+                <li><a href="#"><span class="menu-icon"><img src="img/plates.svg" alt=""></span> Пластины</a></li>
+                <li><a href="#"><span class="menu-icon"><img src="img/sets.svg" alt=""></span> Наборы</a></li>
+                <li><a href="#"><span class="menu-icon"><img src="img/varnishes.svg" alt=""></span> Лаки</a></li>
+                <li><a href="#"><span class="menu-icon"><img src="img/stamps.svg" alt=""></span> Штампы</a></li>
+                <li><a href="#">Аксессуары</a></li>
+                <li><a href="#">Скидки</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="mobile-menu">
+</div>
+    <div class="breadcrumbs-block">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__link">
+                <a href="/" title="Главная">
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li class="breadcrumbs__this">Пластины</li>
+        </ul>
+    </div>
+</div>
+    <main class="main" id="main">
+        <div class="page-section color-block cart">
+            <div class="container">
+                <h1 class="page-header">Оформление заказа</h1>
+                <div class="cart__content">
+                    <form class="cart-form">
+                        <div class="cart-card step-1">
+                            <div class="cart-form__header">
+                                <div class="step-number color-text">Шаг 1 из 3</div>
+                                <div class="form__checkbox form__checkbox-color">
+                                    <input type="checkbox" class="checkbox" id="checkbox-1">
+                                    <label for="checkbox-1" class="checkbox__label">Подтверждение заказа оператором</label>
+                                </div>
+                                <h4>Данные покупателя</h4>
+                            </div>
+                            <div class="form-group">
+                                <div class="form__item">
+                                    <input class="form__control required" type="text" required>
+                                    <label class="form__label">Имя, Фамилия</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">Телефон</label>
+                                    </div>
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">E-mail</label>
+                                    </div>
+                                    <div class="form__item form__checkbox">
+                                        <input type="checkbox" class="checkbox" id="checkbox-2" checked>
+                                        <label for="checkbox-2" class="checkbox__label">Отслеживания статуса заказа по sms и в личном кабинете,
+                                            получать предложения и скидки по эл. почте</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-card step-2">
+                            <div class="cart-form__header">
+                                <div class="step-number color-text">Шаг 2 из 3</div>
+                                <h4>Способ доставки</h4>
+                            </div>
+                            <div class="cart-city">
+                                <label class="cart-city__label">Ваш город:</label>
+                                <input type="text" class="cart-city__control" placeholder="Челябинск">
+                            </div>
+                            <div class="cart-delivery">
+                                <h4>Выберите способ доставки</h4>
+                                <div class="cart-delivery__list">
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-1" checked>
+                                        <label class="radio__label" for="radio-1">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">СДЭК (Курьером)</div>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>1 день</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">200 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-2">
+                                        <label class="radio__label" for="radio-2">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">СДЭК (Пункт выдачи)</div>
+                                                    <p><a href="#">Выбрать пункт выдачи</a></p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>2-3 дня</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">200 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-3">
+                                        <label class="radio__label" for="radio-3">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">Самовывоз</div>
+                                                    <p>ул. Карла Макса. д, 81</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>1 день</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">200 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-4">
+                                        <label class="radio__label" for="radio-4">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">Почта России</div>
+                                                    <p>Оплата на сайте</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>от 10 дней</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">199 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-5">
+                                        <label class="radio__label" for="radio-5">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">Почта России</div>
+                                                    <p>Оплата при получении</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>от 10 дней</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">402 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form__item">
+                                    <input class="form__control required" type="text" required>
+                                    <label class="form__label">Улица</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">Дом</label>
+                                    </div>
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">Квартира / Офис</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-card step-3">
+                            <div class="cart-form__header">
+                                <div class="step-number color-text">Шаг 3 из 3</div>
+                                <h4>Способ оплаты</h4>
+                            </div>
+                            <div class="cart-payment__list">
+                                <div class="cart-payment__item form__radio">
+                                    <input class="radio" type="radio" name="payment" id="payment-1" checked>
+                                    <label for="payment-1" class="radio__label cart-payment__card">
+                                        <img src="img/card-pay.svg" alt="visa master-card">
+                                    </label>
+                                </div>
+                                <div class="cart-payment__item form__radio">
+                                    <input class="radio" type="radio" name="payment" id="payment-2">
+                                    <label for="payment-2" class="radio__label cart-payment__card">
+                                        <img src="img/apple-pay.svg" alt="apple-pay">
+                                    </label>
+                                </div>
+                                <div class="cart-payment__item form__radio">
+                                    <input class="radio" type="radio" name="payment" id="payment-3">
+                                    <label for="payment-3" class="radio__label cart-payment__card">
+                                        <img src="img/g-pay.svg" alt="g-pay">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <textarea class="form__control"></textarea>
+                                <label class="form__label">Коментарий к заказу</label>    
+                            </div>
+                            <div class="cart-price">
+                                <h4>К оплате</h4>
+                                <div class="cart-price__list">
+                                    <div class="cart-price__item">
+                                        <div class="cart-price__title">Товары</div>
+                                        <div class="cart-price__desc">3 шт</div>
+                                        <div class="cart-price__sum">560 р.</div>
+                                    </div>
+                                    <div class="cart-price__item">
+                                        <div class="cart-price__title">Доставка</div>
+                                        <div class="cart-price__desc">СДЭК (Курьером)</div>
+                                        <div class="cart-price__sum">200 р.</div>
+                                    </div>
+                                    <div class="cart-price__item cart-price__item-total">
+                                        <div class="cart-price__title">Итого</div>
+                                        <div class="cart-price__sum">700 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-form__footer">
+                                <input type="submit" class="btn btn-color" value="Подтвердить заказ">
+                                <div class="form__agreement">
+                                    Нажимая на кнопку, вы подтверждаете свое совершеннолетие,
+                                    соглашаетесь на обработку персональных данных в соответствии
+                                    с <a href="#">условиями продажи</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="cart-info">
+                        <div class="cart-card">
+                            <div class="cart-info__header">
+                                <p class="color-text">12 товаров</p>
+                                <h4>Ваша корзина</h4>
+                            </div>
+                            <div class="cart-info__list">
+                                <div class="cart-info__item">
+                                    <div class="cart-info__img">
+                                        <img src="img/prod1.png" alt="">
+                                    </div>
+                                    <div class="card-info__desc">
+                                        <div class="card-info__title">
+                                            <a href="#">Пластина для стемпинга GO! STEMP BAD TRIP</a>
+                                        </div>
+                                        <div class="card-info__line">
+                                            <div class="quantity-block">
+                                                <a href="#" class="quantity__link quantity__link-minus">
+                                                    <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 0H9V2H0V0Z" fill="black"></path>
+                                                    </svg>
+                                                </a>
+                                                <input class="quantity__control" value="1">
+                                                <a href="#" class="quantity__link quantity__link-plus">
+                                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 4.18699H4.5393V0H6.4607V4.18699H11V5.79268H6.4607V10H4.5393V5.79268H0V4.18699Z" fill="#343131">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="card-info__price">
+                                                <div class="price">289 р.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-info__item">
+                                    <div class="cart-info__img">
+                                        <img src="img/prod2.png" alt="">
+                                    </div>
+                                    <div class="card-info__desc">
+                                        <div class="card-info__title">
+                                            <a href="#">Пластина для стемпинга GO! STEMP BAD TRIP GO! STEMP BAD TRIP</a>
+                                        </div>
+                                        <div class="card-info__line">
+                                            <div class="quantity-block">
+                                                <a href="#" class="quantity__link quantity__link-minus">
+                                                    <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 0H9V2H0V0Z" fill="black"></path>
+                                                    </svg>
+                                                </a>
+                                                <input class="quantity__control" value="1">
+                                                <a href="#" class="quantity__link quantity__link-plus">
+                                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 4.18699H4.5393V0H6.4607V4.18699H11V5.79268H6.4607V10H4.5393V5.79268H0V4.18699Z"
+                                                            fill="#343131">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="card-info__price">
+                                                <div class="price">1289 р.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-info__item">
+                                    <div class="cart-info__img">
+                                        <img src="img/prod3.jpg" alt="">
+                                    </div>
+                                    <div class="card-info__desc">
+                                        <div class="card-info__title">
+                                            <a href="#">GO! STEMP BAD TRIP GO! STEMP BAD TRIP</a>
+                                        </div>
+                                        <div class="card-info__line">
+                                            <div class="quantity-block">
+                                                <a href="#" class="quantity__link quantity__link-minus">
+                                                    <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 0H9V2H0V0Z" fill="black"></path>
+                                                    </svg>
+                                                </a>
+                                                <input class="quantity__control" value="1">
+                                                <a href="#" class="quantity__link quantity__link-plus">
+                                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 4.18699H4.5393V0H6.4607V4.18699H11V5.79268H6.4607V10H4.5393V5.79268H0V4.18699Z"
+                                                            fill="#343131">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="card-info__price">
+                                                <div class="price">5289 р.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-info__footer">
+                                <div class="coupon-input">
+                                    <input type="text" class="form__control" placeholder="Купон">
+                                    <input type="submit" class="btn btn-color" value="ОК">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-color">Купить в 1 клик</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer page-section">
+    <div class="container">
+        <div class="footer__top">
+            <div class="logo">
+                <a href="/"><img src="img/logo.svg"></a>
+            </div>
+            <div class="footer__menu">
+                <ul class="main-menu">
+                    <li><a href="#">О бренде</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Представители</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="footer__contacts">
+                    <div class="footer__contacts-item">
+                        <a href="tel:88007770618"><b>8 800 777 06 18</b></a>
+                    </div>
+                    <div class="footer__contacts-item">
+                        <a href="mailto:milk@milkgel.ru">milk@milkgel.ru</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__telegram">
+                <div class="telegram-text" href="#">
+                    <img src="img/telegram.svg">
+                    <span>
+                        <b>Подпишить на рассылку в Telegram!</b><br>Всегда крутые новости!
+                    </span>
+                </div>
+                <a href="#" class="btn btn-border-dark">Подписаться</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+                <div class="copyright">Все права защищены</div>
+                <div class="footer__bottom-link">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__socials">
+                    <ul class="socials">
+                        <li><a href="vk.com"><img src="img/vk.svg" alt=""></a></li>
+                        <li><a href="instagram"><img src="img/inst.svg" alt=""></a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

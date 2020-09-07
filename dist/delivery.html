@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="main">
+<body class="inner">
     <header class="header">
     <div class="container">
         <div class="header__top">
@@ -121,23 +121,220 @@
 </header>
 <div class="mobile-menu">
 </div>
+    <div class="breadcrumbs-block">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__link">
+                <a href="/" title="Главная">
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li class="breadcrumbs__this">Пластины</li>
+        </ul>
+    </div>
+</div>
     <main class="main" id="main">
-        <div class="page-section">
+        <div class="page-section color-block delivery">
             <div class="container">
-                <ul class="page-list">
-                    <li class="page-item"><a href="main.html">Главная</a></li>
-                    <li class="page-item"><a href="catalog.html">Каталог</a></li>
-                    <li class="page-item"><a href="product-card.html">Карточка товара</a></li>
-                    <li class="page-item"><a href="product-card-sale.html">Карточка товара скидка</a></li>
-                    <li class="page-item"><a href="cart.html">Корзина</a></li>
-                    <li class="page-item"><a href="delivery.html">Доставка и оплата</a></li>
-                    <li class="page-item"><a href="search.html">Результаты поиска</a></li>
-                    <li class="page-item"><a href="favorites.html">Избранное</a></li>
-                    <li class="page-item"><a href="agreement.html">Политика</a></li>
-                    <li class="page-item"><a href="404.html">404</a></li>
-                </ul>
+                <h1 class="page-header">Доставка и оплата</h1>
+                <div class="delivery-top">
+                    <div class="delivery-city">
+                        <div class="delivery-card">
+                            <form class="delivery-form">
+                                <div class="delivery-select">
+                                    <label class="delivery-select__label">Ваш город:</label>
+                                    <input type="text" class="delivery-select__control" placeholder="Челябинск">
+                                </div>
+                            </form>
+                            <div class="delivery-method__list">
+                                <div class="delivery-method__item">
+                                    <div class="delivery-method__col">
+                                        <p><b>СДЭК (Курьером)</b></p>
+                                        <p></p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>1 день</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p><b>200 Р</b></p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>Бесплатно от 2000Р</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-method__item">
+                                    <div class="delivery-method__col">
+                                        <p><b>СДЭК (Пункт выдачи)</b></p>
+                                        <p></p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>2-3 дня</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p><b>200 Р</b></p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>Бесплатно от 2000Р</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-method__item">
+                                    <div class="delivery-method__col">
+                                        <p><b>Самовывоз</b></p>
+                                        <p>ул. Карла Макса. д, 81</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>1 день</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p><b>0 Р</b></p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="delivery-method__item">
+                                    <div class="delivery-method__col">
+                                        <p><b>Почта Росии</b></p>
+                                        <p>Оплата на сайте</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>2-3 дня</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p><b>199 Р</b></p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>Бесплатно от 2000Р</p>
+                                    </div>
+                                </div>
+                                <div class="delivery-method__item">
+                                    <div class="delivery-method__col">
+                                        <p><b>Почта Росии</b></p>
+                                        <p>Оплата при получении</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p>2-3 дня</p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p><b>199 Р</b></p>
+                                    </div>
+                                    <div class="delivery-method__col">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-payment">
+                        <div class="delivery-card">
+                            <h4>Способы оплаты:</h4>
+                            <div class="delivery-payment__list">
+                                <div class="delivery-payment__item">
+                                    <div class="delivery-payment__img">
+                                        <img src="img/pay-1.svg" alt="">
+                                    </div>
+                                    <div class="delivery-payment__desc">Наличными<br> при получении</div>
+                                </div>
+                                <div class="delivery-payment__item">
+                                    <div class="delivery-payment__img">
+                                        <img src="img/pay-2.svg" alt="">
+                                    </div>
+                                    <div class="delivery-payment__desc">Банковской картой<br> системы Visa или&nbsp;MasterCard</div>
+                                </div>
+                                <div class="delivery-payment__item">
+                                    <div class="delivery-payment__img">
+                                        <img src="img/pay-3.svg" alt="">
+                                    </div>
+                                    <div class="delivery-payment__desc">Наложенным платежом<br> при работе с&nbsp;Почтой России</div>
+                                </div>
+                                <div class="delivery-payment__item">
+                                    <div class="delivery-payment__img">
+                                        <img src="img/pay-4.svg" alt="">
+                                    </div>
+                                    <div class="delivery-payment__desc">Apple pay&nbsp;и <br>google pay</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-map">
+                    <div class="delivery-card">
+                        <h4>Постматы и пункты выдачи CDEK</h4>
+                        <div class="delivery-map__content">
+                            <div class="delivery-map__left">
+                                <img src="img/delivery-map.jpg" alt="">
+                                <div class="map-balloon">
+                                    <div class="map-balloon__header">Теорема</div>
+                                    <div class="map-balloon__desc">
+                                        <p>
+                                            <b>Адрес:</b><br>пр-кт. Комсомольский 69
+                                        </p>
+                                        <p>
+                                            <b>Режим работы:</b><br>Cб-Вс 10:00 - 16:00<br>Пн-Пт 09:00-20:00
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery-map__right">
+                                <ul class="delivery-point__list">
+                                    <li class="delivery-point__item active">пр-кт. Комсомольский, 69</li>
+                                    <li class="delivery-point__item">пр-кт. Комсомольский, 10Г</li>
+                                    <li class="delivery-point__item">ул. Гагарина, 38</li>
+                                    <li class="delivery-point__item">пр-кт. Ленина, 31</li>
+                                    <li class="delivery-point__item">ул. Академика Королева, 44</li>
+                                    <li class="delivery-point__item">ул. Бейвеля, 33</li>
+                                    <li class="delivery-point__item">ул. Комарова, 137</li>
+                                    <li class="delivery-point__item">ул. Пионерская, 3</li>
+                                    <li class="delivery-point__item">ул. Бейвеля, 33</li>
+                                    <li class="delivery-point__item">ул. Комарова, 137</li>
+                                    <li class="delivery-point__item">ул. Пионерская, 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="page-section instagram-block">
+    <div class="container">
+        <h2 class="block-title center">#GOSTAMP</h2>
+    </div>
+    <div class="instagram-block__content">
+        <div class="instagram-block__text">
+            <h2>Наш инстаграм</h2>
+            <p>твое вдохновение</p>
+            <a href="#" class="btn btn-border-color btn-next">Перейти в Instagram</a>
+        </div>
+        <div class="instagram-block__gallery">
+            <div class="instagram-block__gallery-list">
+                <div class="instagram-block__gallery-item">
+                    <div class="instagram-block__gallery-card">
+                        <a href="#" class="link"></a>
+                        <img src="img/inst1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="instagram-block__gallery-item">
+                    <div class="instagram-block__gallery-card">
+                        <a href="#" class="link"></a>
+                        <img src="img/inst2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="instagram-block__gallery-item">
+                    <div class="instagram-block__gallery-card">
+                        <a href="#" class="link"></a>
+                        <img src="img/inst3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="instagram-block__gallery-item">
+                    <div class="instagram-block__gallery-card">
+                        <a href="#" class="link"></a>
+                        <img src="img/inst4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     </main>
     <footer class="footer page-section">
     <div class="container">

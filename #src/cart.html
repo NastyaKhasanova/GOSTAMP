@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoStamp</title>
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--styles-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="inner">
+    @@include('_header.html')
+    @@include('_breadcrumbs.html')
+    <main class="main" id="main">
+        <div class="page-section color-block cart">
+            <div class="container">
+                <h1 class="page-header">Оформление заказа</h1>
+                <div class="cart__content">
+                    <form class="cart-form">
+                        <div class="cart-card step-1">
+                            <div class="cart-form__header">
+                                <div class="step-number color-text">Шаг 1 из 3</div>
+                                <div class="form__checkbox form__checkbox-color">
+                                    <input type="checkbox" class="checkbox" id="checkbox-1">
+                                    <label for="checkbox-1" class="checkbox__label">Подтверждение заказа оператором</label>
+                                </div>
+                                <h4>Данные покупателя</h4>
+                            </div>
+                            <div class="form-group">
+                                <div class="form__item">
+                                    <input class="form__control required" type="text" required>
+                                    <label class="form__label">Имя, Фамилия</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">Телефон</label>
+                                    </div>
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">E-mail</label>
+                                    </div>
+                                    <div class="form__item form__checkbox">
+                                        <input type="checkbox" class="checkbox" id="checkbox-2" checked>
+                                        <label for="checkbox-2" class="checkbox__label">Отслеживания статуса заказа по sms и в личном кабинете,
+                                            получать предложения и скидки по эл. почте</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-card step-2">
+                            <div class="cart-form__header">
+                                <div class="step-number color-text">Шаг 2 из 3</div>
+                                <h4>Способ доставки</h4>
+                            </div>
+                            <div class="cart-city">
+                                <label class="cart-city__label">Ваш город:</label>
+                                <input type="text" class="cart-city__control" placeholder="Челябинск">
+                            </div>
+                            <div class="cart-delivery">
+                                <h4>Выберите способ доставки</h4>
+                                <div class="cart-delivery__list">
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-1" checked>
+                                        <label class="radio__label" for="radio-1">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">СДЭК (Курьером)</div>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>1 день</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">200 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-2">
+                                        <label class="radio__label" for="radio-2">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">СДЭК (Пункт выдачи)</div>
+                                                    <p><a href="#">Выбрать пункт выдачи</a></p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>2-3 дня</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">200 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-3">
+                                        <label class="radio__label" for="radio-3">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">Самовывоз</div>
+                                                    <p>ул. Карла Макса. д, 81</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>1 день</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">200 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-4">
+                                        <label class="radio__label" for="radio-4">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">Почта России</div>
+                                                    <p>Оплата на сайте</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>от 10 дней</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">199 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="cart-delivery__item form__radio">
+                                        <input type="radio" class="radio" name="radio" id="radio-5">
+                                        <label class="radio__label" for="radio-5">
+                                            <div class="cart-delivery__row">
+                                                <div class="cart-delivery__col">
+                                                    <div class="cart-delivery__title">Почта России</div>
+                                                    <p>Оплата при получении</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <p>от 10 дней</p>
+                                                </div>
+                                                <div class="cart-delivery__col">
+                                                    <div class="delivery-price">402 р.</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form__item">
+                                    <input class="form__control required" type="text" required>
+                                    <label class="form__label">Улица</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">Дом</label>
+                                    </div>
+                                    <div class="form__item">
+                                        <input class="form__control required" type="text" required>
+                                        <label class="form__label">Квартира / Офис</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-card step-3">
+                            <div class="cart-form__header">
+                                <div class="step-number color-text">Шаг 3 из 3</div>
+                                <h4>Способ оплаты</h4>
+                            </div>
+                            <div class="cart-payment__list">
+                                <div class="cart-payment__item form__radio">
+                                    <input class="radio" type="radio" name="payment" id="payment-1" checked>
+                                    <label for="payment-1" class="radio__label cart-payment__card">
+                                        <img src="img/card-pay.svg" alt="visa master-card">
+                                    </label>
+                                </div>
+                                <div class="cart-payment__item form__radio">
+                                    <input class="radio" type="radio" name="payment" id="payment-2">
+                                    <label for="payment-2" class="radio__label cart-payment__card">
+                                        <img src="img/apple-pay.svg" alt="apple-pay">
+                                    </label>
+                                </div>
+                                <div class="cart-payment__item form__radio">
+                                    <input class="radio" type="radio" name="payment" id="payment-3">
+                                    <label for="payment-3" class="radio__label cart-payment__card">
+                                        <img src="img/g-pay.svg" alt="g-pay">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <textarea class="form__control"></textarea>
+                                <label class="form__label">Коментарий к заказу</label>    
+                            </div>
+                            <div class="cart-price">
+                                <h4>К оплате</h4>
+                                <div class="cart-price__list">
+                                    <div class="cart-price__item">
+                                        <div class="cart-price__title">Товары</div>
+                                        <div class="cart-price__desc">3 шт</div>
+                                        <div class="cart-price__sum">560 р.</div>
+                                    </div>
+                                    <div class="cart-price__item">
+                                        <div class="cart-price__title">Доставка</div>
+                                        <div class="cart-price__desc">СДЭК (Курьером)</div>
+                                        <div class="cart-price__sum">200 р.</div>
+                                    </div>
+                                    <div class="cart-price__item cart-price__item-total">
+                                        <div class="cart-price__title">Итого</div>
+                                        <div class="cart-price__sum">700 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-form__footer">
+                                <input type="submit" class="btn btn-color" value="Подтвердить заказ">
+                                <div class="form__agreement">
+                                    Нажимая на кнопку, вы подтверждаете свое совершеннолетие,
+                                    соглашаетесь на обработку персональных данных в соответствии
+                                    с <a href="#">условиями продажи</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="cart-info">
+                        <div class="cart-card">
+                            <div class="cart-info__header">
+                                <p class="color-text">12 товаров</p>
+                                <h4>Ваша корзина</h4>
+                            </div>
+                            <div class="cart-info__list">
+                                <div class="cart-info__item">
+                                    <div class="cart-info__img">
+                                        <img src="img/prod1.png" alt="">
+                                    </div>
+                                    <div class="card-info__desc">
+                                        <div class="card-info__title">
+                                            <a href="#">Пластина для стемпинга GO! STEMP BAD TRIP</a>
+                                        </div>
+                                        <div class="card-info__line">
+                                            <div class="quantity-block">
+                                                <a href="#" class="quantity__link quantity__link-minus">
+                                                    <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 0H9V2H0V0Z" fill="black"></path>
+                                                    </svg>
+                                                </a>
+                                                <input class="quantity__control" value="1">
+                                                <a href="#" class="quantity__link quantity__link-plus">
+                                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 4.18699H4.5393V0H6.4607V4.18699H11V5.79268H6.4607V10H4.5393V5.79268H0V4.18699Z" fill="#343131">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="card-info__price">
+                                                <div class="price">289 р.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-info__item">
+                                    <div class="cart-info__img">
+                                        <img src="img/prod2.png" alt="">
+                                    </div>
+                                    <div class="card-info__desc">
+                                        <div class="card-info__title">
+                                            <a href="#">Пластина для стемпинга GO! STEMP BAD TRIP GO! STEMP BAD TRIP</a>
+                                        </div>
+                                        <div class="card-info__line">
+                                            <div class="quantity-block">
+                                                <a href="#" class="quantity__link quantity__link-minus">
+                                                    <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 0H9V2H0V0Z" fill="black"></path>
+                                                    </svg>
+                                                </a>
+                                                <input class="quantity__control" value="1">
+                                                <a href="#" class="quantity__link quantity__link-plus">
+                                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 4.18699H4.5393V0H6.4607V4.18699H11V5.79268H6.4607V10H4.5393V5.79268H0V4.18699Z"
+                                                            fill="#343131">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="card-info__price">
+                                                <div class="price">1289 р.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-info__item">
+                                    <div class="cart-info__img">
+                                        <img src="img/prod3.jpg" alt="">
+                                    </div>
+                                    <div class="card-info__desc">
+                                        <div class="card-info__title">
+                                            <a href="#">GO! STEMP BAD TRIP GO! STEMP BAD TRIP</a>
+                                        </div>
+                                        <div class="card-info__line">
+                                            <div class="quantity-block">
+                                                <a href="#" class="quantity__link quantity__link-minus">
+                                                    <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 0H9V2H0V0Z" fill="black"></path>
+                                                    </svg>
+                                                </a>
+                                                <input class="quantity__control" value="1">
+                                                <a href="#" class="quantity__link quantity__link-plus">
+                                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 4.18699H4.5393V0H6.4607V4.18699H11V5.79268H6.4607V10H4.5393V5.79268H0V4.18699Z"
+                                                            fill="#343131">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="card-info__price">
+                                                <div class="price">5289 р.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-info__footer">
+                                <div class="coupon-input">
+                                    <input type="text" class="form__control" placeholder="Купон">
+                                    <input type="submit" class="btn btn-color" value="ОК">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-color">Купить в 1 клик</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('_footer.html')
+</body>
+
+</html>
