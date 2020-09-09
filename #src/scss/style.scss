@@ -150,6 +150,10 @@ p:not(:last-child) {
     background: $color-block;
 }
 
+.hidden-region {
+    display: none;
+}
+
 /* btn */
 .btn {
   display: inline-block;
@@ -160,6 +164,7 @@ p:not(:last-child) {
   border-radius: 30px;
   border: 1px solid transparent;
   transition: border-color 0.3s ease, background 0.3s linear, color 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-color {
@@ -282,13 +287,19 @@ p:not(:last-child) {
 }
 
 .fancybox-slide {
-    background: url('../img/popup-slider-vector.svg') no-repeat left top;
-    background-size: 38% auto;
+    /* background: url('../img/popup-slider-vector.svg') no-repeat left top, url('../img/popup-vector2.svg') no-repeat right 15% bottom 15%;
+    background-size: 38% auto, 25% auto; */
+    background: url('../img/popup-bg.svg') no-repeat right 45% center;
 }
 
 @media screen and (max-width: 960px) {
-    .fancybox-content {
+    .fancybox-content:not(.form-card):not(.form-auth-wrap) {
         padding: 40px 0;
+    }
+
+    .fancybox-slide {
+        background: url('../img/popup-bg-mob.svg') no-repeat center;
+        background-size: 100% 100%;
     }
 }
 

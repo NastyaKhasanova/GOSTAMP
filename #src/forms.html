@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoStamp</title>
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--styles-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="main">
+    @@include('_header.html')
+    <main class="main" id="main">
+        <div class="page-section">
+            <div class="container">
+                <form class="form-card">
+                    <h3 class="form__title">Быстрый заказ</h3>
+                    <div class="form__item">
+                        <input type="text" class="form__control required" required>
+                        <label class="form__label">Имя</label>
+                    </div>
+                    <div class="form__item error">
+                        <input type="tel" class="form__control form__control-error required" required>
+                        <label class="form__label">Телефон</label>
+                        <div class="error-message">Ошибка ввода</div>
+                    </div>
+                    <div class="form__item">
+                        <textarea class="form__control"></textarea>
+                        <label class="form__label">Комментарий к заказу</label>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn btn-color">Отправить</button>
+                        <div class="form__agreement">
+                            Нажимая на кнопку «отправить» вы соглашаетесь с <a href="#">Обработкой персональных данных</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="page-section">
+            <div class="container">
+                <p><a href="#order-form" class="btn btn-color fancybox">Быстрый заказ</a> <a href="#confirmation" class="btn btn-color fancybox">Спасибо за заявку</a></p>
+                <p><a href="#form-auth" class="btn btn-color fancybox">Вход на сайт 1</a> <a href="#form-auth2" class="btn btn-color fancybox">Вход на сайт 2</a></p>
+            </div>
+        </div>
+    </main>
+    <div class="hidden-region">
+        <form class="form-card order-form" id="order-form">
+            <h3 class="form__title">Быстрый заказ</h3>
+                    <div class="form__item">
+                        <input type="text" class="form__control required" required placeholder="Имя">
+                        <label class="form__label">Имя</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="tel" class="form__control required" required placeholder="Телефон">
+                        <label class="form__label">Телефон</label>
+                    </div>
+                    <div class="form__item">
+                        <textarea class="form__control" placeholder="Комментарий к заказу"></textarea>
+                        <label class="form__label">Комментарий к заказу</label>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn btn-color">Отправить</button>
+                        <div class="form__agreement">
+                            Нажимая на кнопку «отправить» вы соглашаетесь с <a href="#">Обработкой персональных данных</a>
+                        </div>
+                    </div>
+        </form>
+        <div class="webform-confirmation form-card" id="confirmation">
+            <h2 class="webform-confirmation__title color-text">Спасибо</h2>
+            <div class="webform-confirmation__subtitle">Ваш заказ №1234<br> успешно оформлен</div>
+            <p>Наш менеджер свяжется с вами в рабочее время.</p>
+            <p>Время работы интернет-магазина<br> ПН - ПТ: 09:00 – 18:00 </p>
+        </div>
+        <div class="form-auth-wrap" id="form-auth">
+            <div class="form-auth-card">
+                <div class="form-auth-img">
+                    <img src="img/form-bg.jpg" alt="">
+                </div>
+                <form class="form-auth">
+                    <h3 class="form__title">Вход на сайт</h3>
+                    <div class="form__item">
+                        <input type="tel" class="form__control required" required placeholder="Телефон" >
+                        <label class="form__label">Телефон</label>
+                    </div>
+                    <div class="form__item">
+                        <a href="#" class="form-next">Выслать код</a>
+                    </div>
+                    <div class="form__footer">
+                        <div class="form__agreement">Нажимая на кнопку «выслать код» 
+                            вы<br> соглашаетесь с <a href="#">Обработкой персональных данных</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="form-auth-wrap" id="form-auth2">
+            <div class="form-auth-card">
+                <div class="form-auth-img">
+                    <img src="img/form-bg.jpg" alt="">
+                </div>
+                <form class="form-auth">
+                    <h3 class="form__title">Вход на сайт</h3>
+                    <div class="form__item">
+                        <input type="tel" class="form__control required" required placeholder="Телефон" value="+7 963 083 69 69">
+                        <a href="#" class="change-tel">Изменить</a>
+                    </div>
+                    <div class="form__group form-auth__sms">
+                        <div class="form__item">
+                            <input type="text" class="form__control" placeholder="Код из SMS">
+                            <label class="form__label">Код из SMS</label>
+                        </div>
+                        <a href="#" class="form-next">Продолжить</a>
+                    </div>
+                    <div class="form__footer">
+                        <div class="form__agreement">Нажимая на кнопку «выслать код» 
+                            вы<br> соглашаетесь с <a href="#">Обработкой персональных данных</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @@include('_footer.html')
+</body>
+
+</html>

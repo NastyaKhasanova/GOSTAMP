@@ -83,6 +83,7 @@ $(document).ready(function () {
         autoplay: {
             delay: 5000,
         },
+        lazy: true,
     });
     
     var topBannerSwiper = new Swiper('.top-banner__slider', {
@@ -104,6 +105,7 @@ $(document).ready(function () {
         autoplay: {
             delay: 5000,
         },
+        lazy: true,
         breakpoints: {
             525: {
                 spaceBetween: 20,
@@ -130,6 +132,7 @@ $(document).ready(function () {
             autoplay: {
                 delay: 5000,
             },
+            lazy: true,
             breakpoints: {
                 720: {
                     spaceBetween: 30,
@@ -154,6 +157,7 @@ $(document).ready(function () {
         var productCardSliderSwiper = new Swiper(slider, {
             spaceBetween: 10,
             slidesPerView: 1,
+            lazy: true,
             pagination: {
                 el: slider.querySelector('.swiper-pagination'),
                 clickable: true,
@@ -233,6 +237,7 @@ $(document).ready(function () {
                         el: '.sets .swiper-pagination',
                         type: 'progressbar',
                     },
+                    lazy: true,
                 });
             } 
             
@@ -261,6 +266,7 @@ $(document).ready(function () {
                         el: '.instructions .swiper-pagination',
                         type: 'progressbar',
                     },
+                    lazy: true,
                 });
             } 
             
@@ -313,6 +319,8 @@ $(document).ready(function () {
         $('.block-404').css('min-height', function () {
             return $(window).height() - headerHeight + 20 + 'px';
         });
+
+
     });
 
     /* form-control */

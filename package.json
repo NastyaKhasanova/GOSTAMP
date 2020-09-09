@@ -31,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/NastyaKhasanova/GOSTAMP/issues"
   },
-  "homepage": "https://github.com/NastyaKhasanova/GOSTAMP#readme"
+  "homepage": "https://github.com/NastyaKhasanova/GOSTAMP#readme",
+  "dependencies": {}
 }

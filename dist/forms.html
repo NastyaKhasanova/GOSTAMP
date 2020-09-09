@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="inner">
+<body class="main">
     <header class="header">
     <div class="container">
         <div class="header__top">
@@ -121,221 +121,117 @@
 </header>
 <div class="mobile-menu">
 </div>
-    <div class="breadcrumbs-block">
-    <div class="container">
-        <ul class="breadcrumbs">
-            <li class="breadcrumbs__link">
-                <a href="/" title="Главная">
-                    <span>Главная</span>
-                </a>
-            </li>
-            <li class="breadcrumbs__this">Пластины</li>
-        </ul>
-    </div>
-</div>
     <main class="main" id="main">
-        <div class="page-section color-block delivery">
+        <div class="page-section">
             <div class="container">
-                <h1 class="page-header">Доставка и оплата</h1>
-                <div class="delivery__content">
-                    <div class="delivery-city">
-                        <div class="delivery-card">
-                            <form class="delivery-form">
-                                <div class="delivery-select">
-                                    <label class="delivery-select__label">Ваш город:</label>
-                                    <input type="text" class="delivery-select__control" placeholder="Челябинск">
-                                </div>
-                            </form>
-                            <div class="delivery-method__list">
-                                <div class="delivery-method__item">
-                                    <div class="delivery-method__col">
-                                        <p><b>СДЭК (Курьером)</b></p>
-                                        <p></p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>1 день</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p><b>200 Р</b></p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>Бесплатно от 2000Р</p>
-                                    </div>
-                                </div>
-                                <div class="delivery-method__item">
-                                    <div class="delivery-method__col">
-                                        <p><b>СДЭК (Пункт выдачи)</b></p>
-                                        <p></p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>2-3 дня</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p><b>200 Р</b></p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>Бесплатно от 2000Р</p>
-                                    </div>
-                                </div>
-                                <div class="delivery-method__item">
-                                    <div class="delivery-method__col">
-                                        <p><b>Самовывоз</b></p>
-                                        <p>ул. Карла Макса. д, 81</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>1 день</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p><b>0 Р</b></p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <div class="delivery-method__item">
-                                    <div class="delivery-method__col">
-                                        <p><b>Почта Росии</b></p>
-                                        <p>Оплата на сайте</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>2-3 дня</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p><b>199 Р</b></p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>Бесплатно от 2000Р</p>
-                                    </div>
-                                </div>
-                                <div class="delivery-method__item">
-                                    <div class="delivery-method__col">
-                                        <p><b>Почта Росии</b></p>
-                                        <p>Оплата при получении</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p>2-3 дня</p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p><b>199 Р</b></p>
-                                    </div>
-                                    <div class="delivery-method__col">
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
+                <form class="form-card">
+                    <h3 class="form__title">Быстрый заказ</h3>
+                    <div class="form__item">
+                        <input type="text" class="form__control required" required>
+                        <label class="form__label">Имя</label>
+                    </div>
+                    <div class="form__item error">
+                        <input type="tel" class="form__control form__control-error required" required>
+                        <label class="form__label">Телефон</label>
+                        <div class="error-message">Ошибка ввода</div>
+                    </div>
+                    <div class="form__item">
+                        <textarea class="form__control"></textarea>
+                        <label class="form__label">Комментарий к заказу</label>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn btn-color">Отправить</button>
+                        <div class="form__agreement">
+                            Нажимая на кнопку «отправить» вы соглашаетесь с <a href="#">Обработкой персональных данных</a>
                         </div>
                     </div>
-                    <div class="delivery-payment">
-                        <div class="delivery-card">
-                            <h4>Способы оплаты:</h4>
-                            <div class="delivery-payment__list">
-                                <div class="delivery-payment__item">
-                                    <div class="delivery-payment__img">
-                                        <img src="img/pay-1.svg" alt="">
-                                    </div>
-                                    <div class="delivery-payment__desc">Наличными<br> при получении</div>
-                                </div>
-                                <div class="delivery-payment__item">
-                                    <div class="delivery-payment__img">
-                                        <img src="img/pay-2.svg" alt="">
-                                    </div>
-                                    <div class="delivery-payment__desc">Банковской картой<br> системы Visa или&nbsp;MasterCard</div>
-                                </div>
-                                <div class="delivery-payment__item">
-                                    <div class="delivery-payment__img">
-                                        <img src="img/pay-3.svg" alt="">
-                                    </div>
-                                    <div class="delivery-payment__desc">Наложенным платежом<br> при работе с&nbsp;Почтой России</div>
-                                </div>
-                                <div class="delivery-payment__item">
-                                    <div class="delivery-payment__img">
-                                        <img src="img/pay-4.svg" alt="">
-                                    </div>
-                                    <div class="delivery-payment__desc">Apple pay&nbsp;и <br>google pay</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="delivery-map">
-                        <div class="delivery-card">
-                            <h4>Постматы и пункты выдачи CDEK</h4>
-                            <div class="delivery-map__content">
-                                <div class="delivery-map__left">
-                                    <img src="img/delivery-map.jpg" alt="">
-                                    <div class="map-balloon">
-                                        <div class="map-balloon__header">Теорема</div>
-                                        <div class="map-balloon__desc">
-                                            <p>
-                                                <b>Адрес:</b><br>пр-кт. Комсомольский 69
-                                            </p>
-                                            <p>
-                                                <b>Режим работы:</b><br>Cб-Вс 10:00 - 16:00<br>Пн-Пт 09:00-20:00
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="delivery-map__right">
-                                    <ul class="delivery-point__list">
-                                        <li class="delivery-point__item active">пр-кт. Комсомольский, 69</li>
-                                        <li class="delivery-point__item">пр-кт. Комсомольский, 10Г</li>
-                                        <li class="delivery-point__item">ул. Гагарина, 38</li>
-                                        <li class="delivery-point__item">пр-кт. Ленина, 31</li>
-                                        <li class="delivery-point__item">ул. Академика Королева, 44</li>
-                                        <li class="delivery-point__item">ул. Бейвеля, 33</li>
-                                        <li class="delivery-point__item">ул. Комарова, 137</li>
-                                        <li class="delivery-point__item">ул. Пионерская, 3</li>
-                                        <li class="delivery-point__item">ул. Бейвеля, 33</li>
-                                        <li class="delivery-point__item">ул. Комарова, 137</li>
-                                        <li class="delivery-point__item">ул. Пионерская, 3</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-        <div class="page-section instagram-block">
-    <div class="container">
-        <h2 class="block-title center">#GOSTAMP</h2>
-    </div>
-    <div class="instagram-block__content">
-        <div class="instagram-block__text">
-            <h2>Наш инстаграм</h2>
-            <p>твое вдохновение</p>
-            <a href="#" class="btn btn-border-color btn-next">Перейти в Instagram</a>
-        </div>
-        <div class="instagram-block__gallery">
-            <div class="instagram-block__gallery-list">
-                <div class="instagram-block__gallery-item">
-                    <div class="instagram-block__gallery-card">
-                        <a href="#" class="link"></a>
-                        <img src="img/inst1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="instagram-block__gallery-item">
-                    <div class="instagram-block__gallery-card">
-                        <a href="#" class="link"></a>
-                        <img src="img/inst2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="instagram-block__gallery-item">
-                    <div class="instagram-block__gallery-card">
-                        <a href="#" class="link"></a>
-                        <img src="img/inst3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="instagram-block__gallery-item">
-                    <div class="instagram-block__gallery-card">
-                        <a href="#" class="link"></a>
-                        <img src="img/inst4.jpg" alt="">
-                    </div>
-                </div>
+        <div class="page-section">
+            <div class="container">
+                <p><a href="#order-form" class="btn btn-color fancybox">Быстрый заказ</a> <a href="#confirmation" class="btn btn-color fancybox">Спасибо за заявку</a></p>
+                <p><a href="#form-auth" class="btn btn-color fancybox">Вход на сайт 1</a> <a href="#form-auth2" class="btn btn-color fancybox">Вход на сайт 2</a></p>
             </div>
         </div>
-    </div>
-</div>
     </main>
+    <div class="hidden-region">
+        <form class="form-card order-form" id="order-form">
+            <h3 class="form__title">Быстрый заказ</h3>
+                    <div class="form__item">
+                        <input type="text" class="form__control required" required placeholder="Имя">
+                        <label class="form__label">Имя</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="tel" class="form__control required" required placeholder="Телефон">
+                        <label class="form__label">Телефон</label>
+                    </div>
+                    <div class="form__item">
+                        <textarea class="form__control" placeholder="Комментарий к заказу"></textarea>
+                        <label class="form__label">Комментарий к заказу</label>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn btn-color">Отправить</button>
+                        <div class="form__agreement">
+                            Нажимая на кнопку «отправить» вы соглашаетесь с <a href="#">Обработкой персональных данных</a>
+                        </div>
+                    </div>
+        </form>
+        <div class="webform-confirmation form-card" id="confirmation">
+            <h2 class="webform-confirmation__title color-text">Спасибо</h2>
+            <div class="webform-confirmation__subtitle">Ваш заказ №1234<br> успешно оформлен</div>
+            <p>Наш менеджер свяжется с вами в рабочее время.</p>
+            <p>Время работы интернет-магазина<br> ПН - ПТ: 09:00 – 18:00 </p>
+        </div>
+        <div class="form-auth-wrap" id="form-auth">
+            <div class="form-auth-card">
+                <div class="form-auth-img">
+                    <img src="img/form-bg.jpg" alt="">
+                </div>
+                <form class="form-auth">
+                    <h3 class="form__title">Вход на сайт</h3>
+                    <div class="form__item">
+                        <input type="tel" class="form__control required" required placeholder="Телефон" >
+                        <label class="form__label">Телефон</label>
+                    </div>
+                    <div class="form__item">
+                        <a href="#" class="form-next">Выслать код</a>
+                    </div>
+                    <div class="form__footer">
+                        <div class="form__agreement">Нажимая на кнопку «выслать код» 
+                            вы<br> соглашаетесь с <a href="#">Обработкой персональных данных</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="form-auth-wrap" id="form-auth2">
+            <div class="form-auth-card">
+                <div class="form-auth-img">
+                    <img src="img/form-bg.jpg" alt="">
+                </div>
+                <form class="form-auth">
+                    <h3 class="form__title">Вход на сайт</h3>
+                    <div class="form__item">
+                        <input type="tel" class="form__control required" required placeholder="Телефон" value="+7 963 083 69 69">
+                        <a href="#" class="change-tel">Изменить</a>
+                    </div>
+                    <div class="form__group form-auth__sms">
+                        <div class="form__item">
+                            <input type="text" class="form__control" placeholder="Код из SMS">
+                            <label class="form__label">Код из SMS</label>
+                        </div>
+                        <a href="#" class="form-next">Продолжить</a>
+                    </div>
+                    <div class="form__footer">
+                        <div class="form__agreement">Нажимая на кнопку «выслать код» 
+                            вы<br> соглашаетесь с <a href="#">Обработкой персональных данных</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <footer class="footer page-section">
     <div class="container">
         <div class="footer__top">
