@@ -19,8 +19,8 @@ $(document).ready(function () {
         $('.selectize').selectize();
     }
 
-    //oneHeightElements($('.product__card-title'));
-    //oneHeightElements($('.product__card-line'));
+    // oneHeightElements($('.product__card-title'));
+    // oneHeightElements($('.product__card-line'));
 
     //scroll
     /* var $page = $('html, body');
@@ -180,6 +180,9 @@ $(document).ready(function () {
         });
     });
 
+    $(window).on('load resize', function(){
+        oneHeightElements($('.products-tabs__pane .products__slider'));
+    });
 
 
     var sliderClone = $('.product-inner__top--slider').clone();
